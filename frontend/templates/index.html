@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI DevOps Synthetic Intelligence Engine</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-icon">⚙️</span>
+      <span class="logo-text">AI DevOps &amp; Web3 Intelligence Platform</span>
+    </div>
+    <nav>
+      <button id="btn-chat" class="nav-btn active" aria-label="Chat">💬 Chat</button>
+      <button id="btn-agents" class="nav-btn" aria-label="Agents">🤖 Agents</button>
+      <button id="btn-web3" class="nav-btn" aria-label="Web3">🔗 Web3</button>
+    </nav>
+  </header>
+
+  <!-- ── Chat panel ── -->
+  <main id="panel-chat" class="panel active">
+    <section class="chat-container" aria-label="AI Chat">
+      <div id="chat-messages" class="chat-messages" role="log" aria-live="polite"></div>
+      <form id="chat-form" class="chat-input-row" autocomplete="off">
+        <input
+          id="chat-input"
+          type="text"
+          placeholder="Ask the AI agent anything…"
+          aria-label="Chat message"
+          required
+        />
+        <button type="submit" class="send-btn" aria-label="Send">Send ➤</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ── Agents panel ── -->
+  <main id="panel-agents" class="panel" hidden>
+    <section class="info-panel" aria-label="Registered Agents">
+      <h2>Registered AI Agents</h2>
+      <div id="agent-list" class="agent-list">Loading…</div>
+      <button id="btn-refresh-agents" class="action-btn">🔄 Refresh</button>
+    </section>
+  </main>
+
+  <!-- ── Web3 panel ── -->
+  <main id="panel-web3" class="panel" hidden>
+    <section class="info-panel" aria-label="Web3 Wallet">
+      <h2>Web3 Wallet Connect</h2>
+      <p class="subtitle">Connect an EVM-compatible wallet to interact with on-chain AI agents.</p>
+      <div id="wallet-status" class="wallet-status disconnected">
+        🔴 Not connected
+      </div>
+      <button id="btn-connect-wallet" class="action-btn wallet-btn">Connect Wallet</button>
+      <div id="wallet-info" class="wallet-info" hidden></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
