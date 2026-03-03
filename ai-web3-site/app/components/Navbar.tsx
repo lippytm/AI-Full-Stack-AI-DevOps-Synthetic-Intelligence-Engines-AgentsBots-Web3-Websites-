@@ -51,6 +51,12 @@ export function Navbar() {
             >
               Analytics
             </Link>
+            <Link
+              href="/brainkit"
+              className="flex items-center gap-1 hover:text-white transition-colors text-purple-400 hover:text-purple-300 font-medium"
+            >
+              🧠 BrainKit
+            </Link>
           </div>
 
           {/* Wallet Connect Button */}

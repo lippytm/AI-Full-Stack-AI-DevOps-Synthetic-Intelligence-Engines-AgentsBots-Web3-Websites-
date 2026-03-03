@@ -41,6 +41,16 @@ const features = [
     border: "border-amber-500/30",
     badge: "Any EVM chain",
   },
+  {
+    icon: "🧠",
+    title: "AI BrainKit",
+    description:
+      "Orchestrate a swarm of autonomous AI agents that collaborate to analyze markets, audit contracts, and discover DeFi opportunities.",
+    href: "/brainkit",
+    gradient: "from-indigo-500/20 to-indigo-700/10",
+    border: "border-indigo-500/30",
+    badge: "Agent Swarm",
+  },
 ];
 
 export function FeatureCards() {

@@ -8,6 +8,7 @@ A full-stack **AI-powered Web3 platform** built with Next.js, wagmi, and GPT-4o.
 - 👛 **Wallet Connectivity** — Connect MetaMask or any WalletConnect-compatible wallet across 5 EVM chains (Ethereum, Polygon, Arbitrum, Optimism, Base).
 - 📊 **Portfolio Tracker** — View your token balances, NFT holdings, and portfolio value across chains.
 - 📈 **Token Analytics** — AI-powered market insights, sentiment analysis, and token price data.
+- 🧠 **AI BrainKit** — Orchestrate a swarm of autonomous AI agents (Market Analyst, Risk Sentinel, Code Scribe, DeFi Navigator, Data Oracle, Model Trainer) to collaboratively scan markets, audit contracts, and discover DeFi opportunities.
 
 ## Tech Stack
 
@@ -79,6 +80,7 @@ ai-web3-site/
 │   │   └── chat/route.ts      # AI chat API endpoint
 │   ├── ai-chat/page.tsx       # AI Chat interface
 │   ├── analytics/page.tsx     # Token analytics dashboard
+│   ├── brainkit/page.tsx      # AI BrainKit — agent swarm orchestration
 │   ├── portfolio/page.tsx     # Wallet portfolio tracker
 │   ├── components/
 │   │   ├── FeatureCards.tsx   # Homepage feature grid
@@ -100,6 +102,7 @@ ai-web3-site/
 | `/ai-chat` | AI chat assistant with suggested prompts |
 | `/portfolio` | Web3 portfolio dashboard (requires wallet) |
 | `/analytics` | Token market analytics with AI insights |
+| `/brainkit` | AI BrainKit — autonomous agent swarm orchestration |
 
 ## Deployment
 
