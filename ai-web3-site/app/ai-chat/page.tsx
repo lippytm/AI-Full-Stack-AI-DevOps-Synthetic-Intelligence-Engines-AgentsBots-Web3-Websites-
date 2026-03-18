@@ -121,7 +121,7 @@ export default function AIChatPage() {
               </h3>
               <p className="text-gray-400 max-w-md mb-8">
                 Ask me anything about blockchain, DeFi, NFTs, or Web3
-                technology. I'm here to help!
+                technology. I&apos;m here to help!
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-lg">
                 {SUGGESTED_PROMPTS.map((prompt) => (

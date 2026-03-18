@@ -1,5 +1,7 @@
 # AI Web3 Websites
 
+[![CI](https://github.com/lippytm/AI-Full-Stack-AI-DevOps-Synthetic-Intelligence-Engines-AgentsBots-Web3-Websites-/actions/workflows/ci.yml/badge.svg)](https://github.com/lippytm/AI-Full-Stack-AI-DevOps-Synthetic-Intelligence-Engines-AgentsBots-Web3-Websites-/actions/workflows/ci.yml)
+
 A full-stack **AI-powered Web3 platform** built with Next.js, wagmi, and GPT-4o. It combines blockchain connectivity with advanced AI features for navigating the decentralized web.
 
 ## Features
@@ -76,7 +78,8 @@ npm run start
 ai-web3-site/
 ├── app/
 │   ├── api/
-│   │   └── chat/route.ts      # AI chat API endpoint
+│   │   ├── chat/route.ts      # AI chat API endpoint
+│   │   └── health/route.ts    # Health-check endpoint
 │   ├── ai-chat/page.tsx       # AI Chat interface
 │   ├── analytics/page.tsx     # Token analytics dashboard
 │   ├── portfolio/page.tsx     # Wallet portfolio tracker
@@ -100,6 +103,44 @@ ai-web3-site/
 | `/ai-chat` | AI chat assistant with suggested prompts |
 | `/portfolio` | Web3 portfolio dashboard (requires wallet) |
 | `/analytics` | Token market analytics with AI insights |
+| `/api/health` | Health-check endpoint (JSON) for integrations |
+| `/api/chat` | POST endpoint — AI chat completions |
+
+## Integration
+
+This service exposes a JSON health-check endpoint that any other service can poll to verify availability:
+
+```bash
+curl https://<your-domain>/api/health
+```
+
+Example response:
+
+```json
+{
+  "status": "ok",
+  "service": "ai-web3-site",
+  "version": "0.1.0",
+  "timestamp": "2026-01-01T00:00:00.000Z",
+  "features": {
+    "aiChat": true,
+    "portfolio": true,
+    "analytics": true,
+    "walletConnect": true
+  },
+  "chains": ["mainnet", "polygon", "arbitrum", "optimism", "base"]
+}
+```
+
+### AI Chat API
+
+Other services can call the AI chat endpoint directly:
+
+```bash
+curl -X POST https://<your-domain>/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"messages": [{"role": "user", "content": "What is DeFi?"}]}'
+```
 
 ## Deployment
 
