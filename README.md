@@ -10,6 +10,7 @@ A full-stack **AI-powered Web3 platform** built with Next.js, wagmi, and GPT-4o.
 - 👛 **Wallet Connectivity** — Connect MetaMask or any WalletConnect-compatible wallet across 5 EVM chains (Ethereum, Polygon, Arbitrum, Optimism, Base).
 - 📊 **Portfolio Tracker** — View your token balances, NFT holdings, and portfolio value across chains.
 - 📈 **Token Analytics** — AI-powered market insights, sentiment analysis, and token price data.
+- 🪐 **Hermes Fabric Engine** — AI Clone Copilot with multi-agent swarm orchestration. Five specialized agents (Analyst, Executor, Guardian, Oracle, Synthesizer) collaborate across the Hermes Fabric network for DeFi strategy, contract auditing, risk assessment, and on-chain automation.
 
 ## Tech Stack
 
@@ -79,9 +80,11 @@ ai-web3-site/
 ├── app/
 │   ├── api/
 │   │   ├── chat/route.ts      # AI chat API endpoint
+│   │   ├── hermes/route.ts    # Hermes Fabric Engine API (swarm agents)
 │   │   └── health/route.ts    # Health-check endpoint
 │   ├── ai-chat/page.tsx       # AI Chat interface
 │   ├── analytics/page.tsx     # Token analytics dashboard
+│   ├── hermes/page.tsx        # Hermes Fabric Engine — swarm copilot
 │   ├── portfolio/page.tsx     # Wallet portfolio tracker
 │   ├── components/
 │   │   ├── FeatureCards.tsx   # Homepage feature grid
@@ -101,10 +104,12 @@ ai-web3-site/
 |-------|-------------|
 | `/` | Homepage with hero, stats, and feature cards |
 | `/ai-chat` | AI chat assistant with suggested prompts |
+| `/hermes` | Hermes Fabric Engine — AI Clone Copilot with swarm agents |
 | `/portfolio` | Web3 portfolio dashboard (requires wallet) |
 | `/analytics` | Token market analytics with AI insights |
 | `/api/health` | Health-check endpoint (JSON) for integrations |
 | `/api/chat` | POST endpoint — AI chat completions |
+| `/api/hermes` | GET/POST endpoint — Hermes Fabric swarm agents |
 
 ## Integration
 
