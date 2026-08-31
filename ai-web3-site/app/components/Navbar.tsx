@@ -51,6 +51,12 @@ export function Navbar() {
             >
               Analytics
             </Link>
+            <Link
+              href="/hermes"
+              className="hover:text-white transition-colors"
+            >
+              Hermes
+            </Link>
           </div>
 
           {/* Wallet Connect Button */}

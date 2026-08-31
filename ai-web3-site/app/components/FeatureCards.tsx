@@ -41,6 +41,16 @@ const features = [
     border: "border-amber-500/30",
     badge: "Any EVM chain",
   },
+  {
+    icon: "🪐",
+    title: "Hermes Fabric Engine",
+    description:
+      "AI Clone Copilot with multi-agent swarm orchestration. Analyst, Executor, Guardian, Oracle, and Synthesizer agents collaborate across the Hermes Fabric network.",
+    href: "/hermes",
+    gradient: "from-emerald-500/20 to-teal-700/10",
+    border: "border-emerald-500/30",
+    badge: "Swarms v1",
+  },
 ];
 
 export function FeatureCards() {
