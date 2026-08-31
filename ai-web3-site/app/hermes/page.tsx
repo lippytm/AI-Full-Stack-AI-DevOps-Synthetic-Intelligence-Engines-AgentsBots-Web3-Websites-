@@ -49,8 +49,9 @@ function MarkdownContent({ content }: { content: string }) {
             <p
               key={i}
               className="text-emerald-300 font-mono text-xs font-semibold"
-              dangerouslySetInnerHTML={{ __html: line }}
-            />
+            >
+              {line}
+            </p>
           );
         }
         if (line.startsWith("**") && line.endsWith("**")) {
@@ -75,8 +76,17 @@ function MarkdownContent({ content }: { content: string }) {
   );
 }
 
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 function boldify(text: string): string {
-  return text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  return escapeHtml(text).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 }
 
 const HERMES_PROMPTS = [

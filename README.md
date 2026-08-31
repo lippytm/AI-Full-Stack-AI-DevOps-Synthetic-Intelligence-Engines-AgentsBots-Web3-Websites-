@@ -80,12 +80,12 @@ ai-web3-site/
 ├── app/
 │   ├── api/
 │   │   ├── chat/route.ts      # AI chat API endpoint
-│   │   │   ├── hermes/route.ts    # Hermes Fabric Engine API (swarm agents)
-│   │   │   └── health/route.ts    # Health-check endpoint
+│   │   ├── hermes/route.ts    # Hermes Fabric Engine API (swarm agents)
+│   │   └── health/route.ts    # Health-check endpoint
 │   ├── ai-chat/page.tsx       # AI Chat interface
-│   │   ├── analytics/page.tsx     # Token analytics dashboard
-│   │   ├── hermes/page.tsx        # Hermes Fabric Engine — swarm copilot
-│   │   ├── portfolio/page.tsx     # Wallet portfolio tracker
+│   ├── analytics/page.tsx     # Token analytics dashboard
+│   ├── hermes/page.tsx        # Hermes Fabric Engine — swarm copilot
+│   ├── portfolio/page.tsx     # Wallet portfolio tracker
 │   ├── components/
 │   │   ├── FeatureCards.tsx   # Homepage feature grid
 │   │   ├── HeroSection.tsx    # Landing page hero
